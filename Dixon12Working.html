@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dixon 12</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="shutdown-screen" class="hidden">
+        <button id="turn-on-button">Turn On Dixon 12</button>
+    </div>
+    <div id="main-screen">
+        <div id="taskbar">
+            <div id="start-button" class="taskbar-item"><div id="logo"></div></div>
+            <div id="taskbar-icons" class="taskbar-item">
+                <div class="icon" id="notepad-icon">Notepad</div>
+                <div class="icon" id="browser-icon">Browser</div>
+                <div class="icon" id="calculator-icon">Calculator</div>
+                <div class="icon" id="settings-icon">Settings</div>
+            </div>
+            <div id="system-tray" class="taskbar-item">
+                <span id="clock"></span>
+                <button id="shutdown-button">Shutdown</button>
+            </div>
+        </div>
+        <div id="start-menu" class="hidden">
+            <div id="start-menu-content">
+                <div class="start-menu-item" id="open-notepad">Notepad</div>
+                <div class="start-menu-item" id="open-browser">Browser</div>
+                <div class="start-menu-item" id="open-calculator">Calculator</div>
+                <div class="start-menu-item" id="open-settings">Settings</div>
+            </div>
+        </div>
+        <div id="desktop">
+            <!-- Notepad Window -->
+            <div class="window hidden" id="notepad-window">
+                <div class="window-header">Notepad <span class="close">&times;</span></div>
+                <textarea></textarea>
+            </div>
+            <!-- Browser Window -->
+            <div class="window hidden" id="browser-window">
+                <div class="window-header">Browser <span class="close">&times;</span></div>
+                <iframe src="https://browser.rammerhead.org"></iframe>
+            </div>
+            <!-- Calculator Window -->
+            <div class="window hidden" id="calculator-window">
+                <div class="window-header">Calculator <span class="close">&times;</span></div>
+                <div class="calculator">
+                    <input type="text" class="calculator-screen" value="" disabled />
+                    <div class="calculator-buttons">
+                        <button class="operator" value="+">+</button>
+                        <button class="operator" value="-">-</button>
+                        <button class="operator" value="*">&times;</button>
+                        <button class="operator" value="/">&divide;</button>
+                        <button value="7">7</button>
+                        <button value="8">8</button>
+                        <button value="9">9</button>
+                        <button value="4">4</button>
+                        <button value="5">5</button>
+                        <button value="6">6</button>
+                        <button value="1">1</button>
+                        <button value="2">2</button>
+                        <button value="3">3</button>
+                        <button value="0">0</button>
+                        <button value=".">.</button>
+                        <button id="clear">C</button>
+                        <button id="equals">=</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Settings Window -->
+            <div class="window hidden" id="settings-window">
+                <div class="window-header">Settings <span class="close">&times;</span></div>
+                <div class="settings-content">
+                    <p>Settings Screen</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
